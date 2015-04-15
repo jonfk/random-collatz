@@ -1,0 +1,28 @@
+= Random Collatz checker
+
+Fun little program that takes an argument and verifies whether the collatz
+conjecture holds for that number. When no argument is given, it will test
+a random number. This let's you test your luck. Will you be the one to find
+a counter example to the Collatz conjecture?
+
+== Collatz Conjecture
+The Collatz conjecture is a conjecture in mathematics named after Lothar Collatz, who first proposed it in 1937.
+The conjecture states that for any natural number over 0, applying the process below eventually reaches 1.
+
+[source,haskell]
+----
+collatz 1 = [1]
+collatz n
+        | even n = n:collatz (n `div` 2)
+        | odd n = n:collatz (3*n + 1)
+----
+
+== What does it mean?
+
+Famous mathematician Paul Erdős said about the Collatz conjecture: "Mathematics may not be ready for such problems."
+
+A great explanation on the importance of the problem by User Greg Muller: http://math.stackexchange.com/questions/2694/what-is-the-importance-of-the-collatz-conjecture[Link]
+
+== Humor
+
+Mentioned on XKCD https://xkcd.com/710/[Link]
